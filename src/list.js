@@ -12,6 +12,7 @@ function List(props) {
         {props.cards.map((card) => (
           <Card
             key={card.id}
+            listId={props.id}
             id={card.id}
             title={card.title}
             content={card.content}
@@ -30,7 +31,4 @@ function List(props) {
   );
 }
 
-List.defaultProps = {
-  onClickAdd: () => {},
-};
 export default List;

@@ -1,18 +1,16 @@
 import React from "react";
 import "./card.css";
 
-export default function Card(props) {
+function Card({ id, title, content, onClickDelete }) {
   return (
     <div className="Card">
-      <button type="button" onClick={() => props.onClickDelete(props.id)}>
+      <button type="button" onClick={() => onClickDelete(id)}>
         delete
       </button>
-      <h3>{props.title}</h3>
-      <p>{props.content}</p>
+      <h3>{title}</h3>
+      <p>{content}</p>
     </div>
   );
 }
 
-Card.propTypes = {
-  onClickDelete: () => {},
-};
+export default Card;
